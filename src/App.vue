@@ -1,6 +1,6 @@
 <script setup>
 import NavBar from "./components/NavBar.vue";
-import Hero from "./components/Hero.vue";
+import Carousel from "./components/Carousel.vue";
 import RelatedProducts from "./components/RelatedProducts.vue";
 import Footer from "./components/Footer.vue";
 import { ref } from 'vue';
@@ -63,7 +63,7 @@ const products = ref([
     >
         <NavBar />
         <main class="pt-20">
-            <Hero />
+            <Carousel />
             <RelatedProducts :items="products" />
         </main>
         <Footer />
