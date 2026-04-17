@@ -7,6 +7,9 @@ const props = defineProps({
         required: true
     }
 });
+
+const emit = defineEmits(['buy']);
+
 </script>
 
 <template>
@@ -26,8 +29,9 @@ const props = defineProps({
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <ProductCard 
                     v-for="item in props.items" 
-                    :key="item.name" 
+                    :key="item.id" 
                     :product="item" 
+                    @buy="(id) => emit('buy',id)"
                 />
             </div>
             
