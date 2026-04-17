@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const isMenuOpen = ref(false)
 
@@ -16,12 +17,12 @@ const toggleMenu = () => {
             </a>
 
             <div class="hidden md:flex gap-8 font-headline uppercase tracking-widest">
-                <a class="text-primary font-bold border-b-2 border-primary pb-1 hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">
+                <RouterLink to="/" class="text-primary font-bold border-b-2 border-primary pb-1 hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">
                     Home
-                </a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 duration-300 ease-in-out" href="#">
+                </RouterLink>
+                <RouterLink to="/about" class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 duration-300 ease-in-out" href="#">
                     About
-                </a>
+                </RouterLink>
                 <a class="text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 duration-300 ease-in-out" href="#">
                     Contact
                 </a>
@@ -52,12 +53,12 @@ const toggleMenu = () => {
             class="md:hidden absolute top-20 left-0 w-full bg-surface-container-high/95 backdrop-blur-xl border-t border-surface-variant shadow-lg"
         >
             <div class="flex flex-col px-8 py-6 gap-6 font-headline uppercase tracking-widest">
-                <a href="#" @click="isMenuOpen = false" class="text-primary font-bold border-b-2 border-primary pb-1 w-max">
+                <RouterLink to="/" href="#" @click="isMenuOpen = false" class="text-primary font-bold border-b-2 border-primary pb-1 w-max">
                     Home
-                </a>
-                <a href="#" @click="isMenuOpen = false" class="text-on-surface-variant hover:text-primary transition-colors">
+                </RouterLink>
+                <RouterLink to="/about" href="#" @click="isMenuOpen = false" class="text-on-surface-variant hover:text-primary transition-colors">
                     About
-                </a>
+                </RouterLink>
                 <a href="#" @click="isMenuOpen = false" class="text-on-surface-variant hover:text-primary transition-colors">
                     Contact
                 </a>
