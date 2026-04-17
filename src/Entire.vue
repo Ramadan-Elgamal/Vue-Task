@@ -1,38 +1,10 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Monolith Kinetics</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;family=Manrope:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
-        body { font-family: 'Manrope', sans-serif; background-color: #0e0e0e; color: #ffffff; }
-        h1, h2, h3, .brand-logo { font-family: 'Space Grotesk', sans-serif; }
-    </style>
-</head>
+
 <body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl shadow-none duration-300 ease-in-out">
-<div class="flex justify-between items-center px-8 h-20 w-full max-w-screen-2xl mx-auto">
-<a class="text-2xl font-bold tracking-tighter text-[#aaffdc] brand-logo" href="#">MONOLITH</a>
-<div class="hidden md:flex gap-8 font-['Space_Grotesk'] uppercase tracking-[0.05em]">
-<a class="text-[#aaffdc] font-bold border-b-2 border-[#aaffdc] pb-1 hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">Home</a>
-<a class="text-[#adaaaa] hover:text-[#aaffdc] transition-colors hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">About</a>
-<a class="text-[#adaaaa] hover:text-[#aaffdc] transition-colors hover:opacity-80 transition-opacity duration-300 ease-in-out" href="#">Contact</a>
-</div>
-<div class="flex gap-4">
-<button aria-label="shopping_cart" class="text-[#aaffdc] hover:opacity-80 transition-opacity duration-300 ease-in-out">
-<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
-</button>
-<button aria-label="account_circle" class="text-[#aaffdc] hover:opacity-80 transition-opacity duration-300 ease-in-out">
-<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-</button>
-</div>
-</div>
-</nav>
+
 <main class="pt-20">
 <!-- Hero Section -->
 <section class="relative min-h-[921px] flex items-center justify-center bg-surface-container-lowest overflow-hidden">
