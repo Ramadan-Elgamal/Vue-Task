@@ -1,4 +1,9 @@
 <script setup>
+  import { onMounted, onUnmounted } from 'vue';
+
+onMounted(() => console.log('AboutView mounted'));
+onUnmounted(() => console.log('AboutView unmounted'));
+
 </script>
 
 <template>

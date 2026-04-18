@@ -1,5 +1,9 @@
 <script setup>
-  
+  import { onMounted, onUnmounted } from 'vue';
+
+onMounted(() => console.log('Hero mounted'));
+onUnmounted(() => console.log('Hero unmounted'));
+
 </script>
 
 <template>

@@ -1,5 +1,9 @@
 <script setup>
 import ProductCard from './ProductCard.vue'
+import { onMounted, onUnmounted } from 'vue';
+
+onMounted(() => console.log('RelatedProducts mounted'));
+onUnmounted(() => console.log('Related Products unmounted'));
 
 const props = defineProps({
     items: {

@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+  import { onMounted, onUnmounted } from 'vue';
+
+onMounted(() => console.log('Footer mounted'));
+onUnmounted(() => console.log('Footer unmounted'));
+
+</script>
 
 <template>
     <footer

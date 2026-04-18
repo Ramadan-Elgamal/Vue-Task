@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import ProductDetails from '../components/ProductDetails.vue'
+import { onMounted, onUnmounted } from 'vue';
 
 const props = defineProps({
     products: {
@@ -21,6 +22,10 @@ const product = computed(() => {
 const relayBuyEvent = (productId) => {
     emit('buy', productId)
 }
+
+
+onMounted(() => console.log('ProductView mounted'));
+onUnmounted(() => console.log('ProductView unmounted'));
 </script>
 
 <template>

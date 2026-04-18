@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import { onMounted, onUnmounted } from 'vue';
+
+onMounted(() => console.log('Navbar mounted'));
+onUnmounted(() => console.log('Navbar unmounted'));
 
 const isMenuOpen = ref(false)
 

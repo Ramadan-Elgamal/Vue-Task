@@ -1,5 +1,9 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { onMounted, onUnmounted } from 'vue';
+
+onMounted(() => console.log('ProductCard mounted'));
+onUnmounted(() => console.log('ProductCard unmounted'));
 
 const props = defineProps({
     product: {

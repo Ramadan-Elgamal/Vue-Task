@@ -1,4 +1,9 @@
 <script setup>
+  import { onMounted, onUnmounted } from 'vue';
+
+onMounted(() => console.log('Product Details mounted'));
+onUnmounted(() => console.log('Product Details unmounted'));
+
 const props = defineProps({
     product: {
         type: Object,
