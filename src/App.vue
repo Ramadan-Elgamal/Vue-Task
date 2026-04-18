@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar.vue";
 import Footer from "./components/Footer.vue";
 import { RouterView } from "vue-router";
 import { ref } from 'vue';
+
 const products = ref([
     {
         id: 1,
@@ -63,14 +64,14 @@ const products = ref([
 ]);
 
 const handleBuy = (productId) => {
-    console.log("App.vue heard the buy event for ID:", productId); // <-- Add this
+    console.log("App.vue heard the buy event for ID:", productId);
     
     const product = products.value.find(p => p.id === productId);
     
     if (product) {
         if (product.stock > 0) {
             product.stock--;
-            console.log("Success! New stock for", product.name, "is", product.stock); // <-- Add this
+            console.log("Success! New stock for", product.name, "is", product.stock);
         } else {
             console.log("Product is already out of stock!");
         }
