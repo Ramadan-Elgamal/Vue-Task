@@ -1,8 +1,9 @@
 <script setup>
-  import { onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted } from "vue";
+import { useCartStore } from "../stores/cartStore";
 
-onMounted(() => console.log('Product Details mounted'));
-onUnmounted(() => console.log('Product Details unmounted'));
+onMounted(() => console.log("Product Details mounted"));
+onUnmounted(() => console.log("Product Details unmounted"));
 
 const props = defineProps({
     product: {
@@ -10,12 +11,6 @@ const props = defineProps({
         required: true
     }
 });
-
-const emit = defineEmits(["buy"]);
-
-const onBuyClick = () => {
-    emit("buy", props.product.id);
-};
 </script>
 
 <template>
@@ -36,7 +31,7 @@ const onBuyClick = () => {
             <p class="text-sm text-gray-400 mb-6">Stock: {{ product.stock }}</p>
 
             <button
-                @click="onBuyClick"
+                @click="cartStore.addToCart(product)"
                 :disabled="product.stock <= 0"
                 class="bg-primary text-on-primary px-8 py-4 rounded font-label font-bold uppercase tracking-widest transition-all duration-300 hover:bg-primary-dim hover:shadow-[0_0_20px_rgba(170,255,220,0.4)] hover:-translate-y-1 active:scale-95 active:shadow-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary disabled:hover:shadow-none disabled:hover:translate-y-0 disabled:active:scale-100"
             >

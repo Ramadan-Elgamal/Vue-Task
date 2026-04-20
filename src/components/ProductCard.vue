@@ -1,9 +1,10 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted } from "vue";
+import { useCartStore } from "../stores/cartStore";
 
-onMounted(() => console.log('ProductCard mounted'));
-onUnmounted(() => console.log('ProductCard unmounted'));
+onMounted(() => console.log("ProductCard mounted"));
+onUnmounted(() => console.log("ProductCard unmounted"));
 
 const props = defineProps({
     product: {
@@ -12,7 +13,7 @@ const props = defineProps({
     }
 });
 
-const emit = defineEmits(["buy"]);
+const cartStore = useCartStore();
 
 const getDiscountedPrice = (priceString, discountPercentage) => {
     if (!discountPercentage) return priceString;
@@ -96,7 +97,7 @@ const getDiscountedPrice = (priceString, discountPercentage) => {
                 </RouterLink>
 
                 <button
-                    @click="emit('buy', product.id)"
+                    @click="cartStore.addToCart(product)"
                     :disabled="product.stock <= 0"
                     class="flex-1 bg-primary text-on-primary font-label text-xs uppercase tracking-widest font-bold py-3 rounded text-center flex items-center justify-center gap-1 transition-all duration-300 hover:bg-primary-dim hover:shadow-[0_0_15px_rgba(170,255,220,0.4)] hover:-translate-y-1 active:scale-95 active:shadow-sm disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary disabled:hover:shadow-none disabled:hover:translate-y-0 disabled:active:scale-100"
                 >
